@@ -1,0 +1,12 @@
+///centerSpriteToSurface(surface,sprite)
+var su=argument0;//surface
+var sp=argument1;//sprite
+var xo=sprite_get_xoffset(sprite_index);
+var yo=sprite_get_yoffset(sprite_index);
+draw_sprite(sp,argument2,xo,yo);
+
+
+/*
+ The above is useful if you have a surface that has the same dimensions
+ as the sprite you are drawing.
+*/
