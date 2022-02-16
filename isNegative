@@ -1,0 +1,3 @@
+///isNegative(val)
+
+return(argument0<0);
