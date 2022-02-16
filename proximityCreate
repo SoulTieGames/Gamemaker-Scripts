@@ -1,0 +1,22 @@
+///proximityCreate(x, y, object,radius,avoid solids)
+//                 0  1    2      3         4
+var proxX=argument0;
+var proxY=argument1;
+var rdy=argument3;
+if(!argument4){
+ instance_create(proxX+irandom_range(-rdy,rdy),proxY+irandom_range(-rdy,rdy),argument2);
+}else{//check for solids
+ var i,tempX,tempY,c;
+ for(i=0;i<4;i++;){
+   tempX=proxX+lengthdir_x(rdy,90*i);
+   tempY=proxY+lengthdir_y(rdy,90*i);
+   c=collision_rectangle(tempX,tempY,tempX+50,tempY+50,obj_solid,0,1);
+  if(c==noone){
+   instance_create(tempX,tempY,argument2); 
+   return(true);
+   break;
+  }
+ }
+ instance_create(proxX,proxY,argument2);
+ return(false);
+}
