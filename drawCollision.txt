@@ -1,0 +1,3 @@
+///drawCollision(color)
+var c=argument0;
+draw_rectangle_colour(bbox_left,bbox_bottom,bbox_right,bbox_top,c,c,c,c,1);
