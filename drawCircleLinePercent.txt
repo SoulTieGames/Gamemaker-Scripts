@@ -1,0 +1,20 @@
+///drawCircleLinePercent(x, y, radius, color, alpha, percent, width)
+//                       0  1     2      3      4       5       6
+var xx=argument0;
+var yy=argument1;
+var radius=argument2;
+var c=argument3;
+draw_set_alpha(argument4);
+var percent=argument5*.01;
+var thick=argument6;
+draw_primitive_begin(pr_trianglestrip);
+draw_set_colour(c);
+for(i=0;i<=360;i+=1)
+{  
+ if(i<(360*percent)){
+  draw_vertex(xx+lengthdir_x(radius,i),yy+lengthdir_y(radius,i));   
+  draw_vertex(xx+lengthdir_x(radius+thick,i),yy+lengthdir_y(radius+thick,i));    
+ }
+}//end loop
+draw_primitive_end(); 
+draw_set_alpha(1);
