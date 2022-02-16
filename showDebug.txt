@@ -1,0 +1,110 @@
+///showDebug(string)
+var __showDebugtext=argument0;
+if(!is_string(__showDebugtext)){
+ var __s="Error : debug message is not a string";
+}else{
+ __s=argument0;
+}
+var __type="Error Event";
+switch(event_type){
+ case ev_create:{
+  __type="Create Event";
+ }break;
+ case ev_destroy:{
+  __type="Destroy Event";
+ }break;
+ case ev_alarm:{
+  __type="Alarm "+string(event_number)+"  Event";
+ }break;
+ case ev_step:{
+  switch(event_number){
+   case ev_step_normal:{
+    __type="Step Event";
+   }break;
+   case ev_step_begin:{
+    __type="Begin Step Event";
+   }break;
+   case ev_step_end:{
+    __type="End Step Event";
+   }break;
+  }
+ }break;
+ case ev_collision:{
+  __type=object_get_name(event_number)+" Collision Event";
+ }break;
+ case ev_keyboard:{
+  __type="Keyboard Event";
+ }break;
+ case ev_mouse:{
+  __type="Mouse Event";
+ }break;
+ case ev_other:{
+  switch(event_number){
+   case ev_game_start:{
+    __type="Game Start Event";
+   }break;
+   case ev_game_end:{
+    __type="Game End Event";
+   }break;
+   case ev_room_start:{
+    __type="Room Start Event";
+   }break;
+   case ev_room_end:{
+    __type="Room End Event";
+   }break;
+   default:{
+    __type="Other Event";
+   }break;
+  }
+ }break;
+ case ev_draw:{
+  switch(event_number){
+   case ev_draw_begin:{
+    __type="Draw Begin Event";
+   }break;
+   case ev_draw_end:{
+    __type="Draw End Event";
+   }break;
+   case ev_draw_pre:{
+    __type="Pre Draw Event";
+   }break;
+   case ev_draw_post:{
+    __type="Post Draw Event";
+   }break;
+   case ev_gui:{
+    __type="Draw GUI Event";
+   }break;
+   case ev_gui_begin:{
+    __type="Draw GUI Begin Event";
+   }break;
+   case ev_gui_end:{
+    __type="Draw GUI End Event";
+   }break;
+   default:{
+    __type="Draw Event";
+   }
+  }
+ }break;
+ case ev_keypress:{
+  __type="Key Press Event";
+ }break;
+ case ev_keyrelease:{
+  __type="Key Release Event";
+ }break;
+ case 11:{
+  __type="Asynchronous Event";
+ }break;
+ default:{
+  __type="Unknown Event";
+ }
+}
+
+ __showDebugText=(object_get_name(object_index)+" : "+__type+" : "+__s);
+ show_debug_message(__showDebugText);
+
+
+
+
+
+
+
