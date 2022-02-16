@@ -1,0 +1,17 @@
+///Approach(start, end, shift)
+    if (argument0 < argument1) 
+    {
+     var first=argument0 + argument2;
+      if(first<argument1)
+      {
+       return(first);
+      }else{return(argument1)}
+    }
+    else
+    {
+     var first=argument0 - argument2;
+      if(first>argument1)
+      {
+       return(first);
+      }else{return(argument1)}
+    }
