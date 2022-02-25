@@ -1,0 +1,17 @@
+///inBetween(variable, min value, max value)
+//returns 0 or 1 depending on if argument0 is
+// in between argument1 and argument2, or -1 on error
+if(!is_real(argument0)){
+ return(-1);
+ showDebug("Error : passed a string to inBetween() script!")
+}else{
+ if(argument0>=argument1){
+  if(argument0<=argument2){
+   return(1);
+  }else{
+   return(0);
+  }
+ }else{
+  return(0);
+ }
+}
