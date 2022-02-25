@@ -1,0 +1,10 @@
+///backSpaceString(string)
+//removes the last character in a string
+//returns the new string
+var __s=argument0;
+if(is_string(__s)){
+ __newS=(string_delete(__s,string_length(__s),1));
+ return(__newS);
+}else{
+ return(string(__s));
+}
