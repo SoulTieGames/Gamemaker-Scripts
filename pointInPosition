@@ -1,0 +1,15 @@
+///pointInPosition(x1, y1, x2, y2);
+//returns bool
+var a0=floor(argument0);
+var a1=floor(argument1);
+var a2=floor(argument2);
+var a3=floor(argument3);
+if(a0!=a2){
+ return(false);
+}else{
+ if(a1!=a3){
+  return(false);
+ }else{
+  return(true);
+ }
+}
