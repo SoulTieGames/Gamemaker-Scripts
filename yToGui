@@ -1,0 +1,4 @@
+///yToGui(y)
+var ay=argument0;
+return(((ay-view_yview[1])/view_hview[1])*display_get_gui_height());
+//change the view number to match the view you are using in the game
