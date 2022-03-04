@@ -1,0 +1,6 @@
+var ax=argument0;
+return(((ax-view_xview[1])/view_wview[1])*display_get_gui_width());
+//change the view numbers to match the view you are using in the game
+
+
+
